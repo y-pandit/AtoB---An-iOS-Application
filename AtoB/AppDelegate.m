@@ -7,6 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "BookRideViewController.h"
+
+@import Firebase;
+@import GoogleSignIn;
+@import GoogleMaps;
+@import GooglePlaces;
+
+
 
 @interface AppDelegate ()
 
@@ -17,7 +25,56 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [FIRApp configure];
+    [GIDSignIn sharedInstance].clientID = [FIRApp defaultApp].options.clientID;
+    [GIDSignIn sharedInstance].delegate = self;
+    [GMSServices provideAPIKey:@"AIzaSyDPG0Qauc_eebko3EcANSEsCYiGOQkGdbg"];
+    //[GMSPlacesClient provideAPIKey:@"AIzaSyDPG0Qauc_eebko3EcANSEsCYiGOQkGdbg"];
+    [GMSPlacesClient provideAPIKey:@"AIzaSyB3UCo-QihUand18qa4SOTHDhChmeH-lZ0"];
+    
+    
     return YES;
+}
+
+- (BOOL)application:(nonnull UIApplication *)application
+            openURL:(nonnull NSURL *)url
+            options:(nonnull NSDictionary<NSString *, id> *)options {
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                      annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+}
+
+- (void)signIn:(GIDSignIn *)signIn
+didSignInForUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+    if (error == nil) {
+        GIDAuthentication *authentication = user.authentication;
+        FIRAuthCredential *credential =
+        [FIRGoogleAuthProvider credentialWithIDToken:authentication.idToken
+                                         accessToken:authentication.accessToken];
+        [[FIRAuth auth] signInWithCredential:credential
+                                  completion:^(FIRUser *user, NSError *error) {
+                                      // ...
+                                      UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+                                      BookRideViewController *main = (BookRideViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"bookView"];
+                                      
+                                      self.window.rootViewController = main;
+                                      
+                                                                            if (error) {
+                                          // ...
+                                          return;
+                                      }
+
+                                  }];
+    }
+}
+
+- (void)signIn:(GIDSignIn *)signIn
+didDisconnectWithUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+    // Perform any operations when the user disconnects from app here.
+    // ...
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

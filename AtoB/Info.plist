@@ -18,6 +18,17 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1072096498555-hmhaq2b5ljbh4kh2k5nr5jtt7ojrvot0</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -33,8 +44,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -43,5 +52,45 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>googlechromes</string>
+        <string>comgooglemaps</string>
+    </array>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Consent to use Location Services</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Show your location on the map</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>uber</string>
+        <string>uberauth</string>
+    </array>
+    <key>UberClientID</key>
+    <string>bg6TsCS3ca0sHNlvz7J8TpqVCnlKieEp</string>
+        <key>UberDisplayName</key>
+        <string>AtoB</string>
+            <key>UberCallbackURIs</key>
+            <array>
+                <dict>
+                    <key>UberCallbackURIType</key>
+                    <string>General</string>
+                    <key>URIString</key>
+                    <string>http://localhost/</string>
+                    </dict>
+                </array>
+            <key>UberServerToken</key>
+            <string>_F7iTW4CmYDRrZ6Izn3Jj3g2785cUnk2USPhx3MR</string>
+            <key>CFBundleURLTypes</key>
+            <array>
+                <dict>
+                    <key>CFBundleTypeRole</key>
+                    <string>Editor</string>
+                    <key>CFBundleURLSchemes</key>
+                    <array>
+                        <string>aTob</string>
+                    </array>
+                </dict>
+            </array>
 </dict>
 </plist>
