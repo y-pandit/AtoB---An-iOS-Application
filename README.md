@@ -47,36 +47,36 @@ To develop A to B the following technologies were used:
 #### PUBLIC APIS USED
 •	In order to get location based services and to get ride request information the following Public APIs were used:
 		
-Google Maps API	  
+##### Google Maps API	  
 RESPONSE TYPE: json	  
 FEATURE: Used to set up a Map with the user’s current location set on the Map with the help of a marker and also mark the destination location after user selects the destination
 
-Google Places API	  
+##### Google Places API	  
 RESPONSE TYPE: json	  
 FEATURE: Used to get Place name for the user’s current Latitude and Longitude  
          Used to get Place Autocomplete functionality of Google Places API to make the destination search bar intuitive.
 
-Google Distance-Matrix API	  
+##### Google Distance-Matrix API	  
 RESPONSE TYPE: json	  
 FEATURE: Used to get the distance from the user’s current location (source_latitude, source_longitude) to the destination location (destination_latitue,destination_longitude) after user selects destination.
 
-Google Directions API	    
+##### Google Directions API	    
 RESPONSE TYPE: json	    
 FEATURE: Used to get the closest route from user’s current location and selected destination and plot on the Google Map.
 
-Uber Cost API	    
+##### Uber Cost API	    
 RESPONSE TYPE: json	    
 FEATURE: Used to get the estimated maximum cost of travel after selecting source and destination and a server token that is received after registering application with the Uber developer’s website (GET request).
 
-Uber Time API	  
+##### Uber Time API	  
 RESPONSE TYPE: json	  
 FEATURE: Used to get the estimated time for the nearest Uber driver to arrive at the pick-up location after the user enters the destination location (GET request).
 
-Lyft Cost_Estimate API	  
+##### Lyft Cost_Estimate API	  
 RESPONSE TYPE: json	  
 FEATURE: Used to get the estimated maximum cost of travel after selecting source and destination and a access token that is received after registering application with the Lyft developer’s website using a POST request.
 
-Lyft eta_estimate API	  
+##### Lyft eta_estimate API	  
 RESPONSE TYPE: json		  
 FEATURE: Used to get the estimated time for the nearest Uber driver to arrive at the pick-up location after the user enters the destination location using the access token (GET request).
 
