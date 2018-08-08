@@ -7,13 +7,26 @@ November 2016-December 2016
 •	Developed using Objective-C, Firebase Platform for authentication, APIs like Google Maps, Places, Distance Matrix and Postman Platform for testing public APIs and understanding response content
 
 ## Introduction
-Let’s start with a scenario. Amy is a student who has to visit a party at a friend’s place…something she has been looking forward to for a while now. She doesn’t own a car and is really hoping for a cheap and quick ride to get to the party. She has multiple options for a ride like Uber and Lyft, but which one is the most convenient? That’s where A to B comes into picture…
+Let’s start with a scenario. Amy is a student who has to visit a party at a friend’s place…something she has been looking forward to for a while now. She doesn’t own a car and is really hoping for a cheap and quick ride to get to the party. She has multiple options for a ride like Uber and Lyft, but which one is the most convenient? That’s where AtoB comes into picture…
 
-### OBJECTIVE OF A TO B
-A to B is an iOS application that users can use to compare ride options provided by Uber and Lyft to make a decision about which service can be used based on estimated price and estimated time of arrival of the driver to the pick-up location. The objective is to present the user with detailed information regarding the available ride options (maybe individual or carpool) and compare services against corresponding costs and time estimates so that user can make an informed decision about the ride service that they want to use without having to toggle between different applications.
+### Objective behind AtoB
+AtoB is an iOS application that users can use to compare ride options provided by Uber and Lyft to make a decision about which service can be used based on estimated price and estimated time of arrival of the driver to the pick-up location. The objective is to present the user with detailed information regarding the available ride options (maybe individual or carpool) and compare services against corresponding costs and time estimates so that user can make an informed decision about the ride service that they want to use without having to toggle between different applications.
 
 “Choose wisely”
-A to B provides a one stop information detailing based on the user’s current location and the chosen destination location. So that the user can choose wisely.
+AtoB provides a one stop information detailing based on the user’s current location and the chosen destination location. So that the user can choose wisely.
+
+### The features of AtoB are as follows:  
+1.	Secure Login  
+2.	Sign-up  
+3.	Forgot Password option  
+4.	Current Location Detection  
+5.	Autocomplete-enabled intuitive search bar for picking destination location  
+6.	Single-click ‘Find Ride’ option to direct user to the comparison page for Uber and Lyft  
+7.	Distance and direction from source to destination plotted on Google Map.  
+8.	Comparison between UberX and Lyft as well as UberPOOL and Lyft Line with respect to Price and Estimated Time of Arrival of   driver to pick-up location  
+9.	Option to go directly to Uber App installed on the phone as well as an option to go directly to the Lyft App on the phone based on the user’s decision.  
+10.	Change Destination as many times as needed by the user.  
+
 
 
 ### Technologies Used
@@ -66,5 +79,4 @@ FEATURE: Used to get the estimated maximum cost of travel after selecting source
 Lyft eta_estimate API	  
 RESPONSE TYPE: json		  
 FEATURE: Used to get the estimated time for the nearest Uber driver to arrive at the pick-up location after the user enters the destination location using the access token (GET request).
-
 		
