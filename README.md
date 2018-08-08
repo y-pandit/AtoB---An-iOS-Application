@@ -79,4 +79,5 @@ FEATURE: Used to get the estimated maximum cost of travel after selecting source
 Lyft eta_estimate API	  
 RESPONSE TYPE: json		  
 FEATURE: Used to get the estimated time for the nearest Uber driver to arrive at the pick-up location after the user enters the destination location using the access token (GET request).
+
 		
